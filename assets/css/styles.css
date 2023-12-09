@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;500&family=Roboto:wght@300;400;500&family=Rubik:wght@300;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Dosis', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+header {
+    background-color: rgb(248, 195, 96);
+    width: 100%;
+    height: 80px;
+}
+
+header > span {
+    font-size: 2rem;
+    position: absolute;
+    padding: 20px 50px;
+}
+
+header > label {
+    float: right;
+    padding: 20px 50px;
+    font-size: 2rem;
+}
+
+header > ul {
+    float: right;
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+#check:checked ~ ul {
+    display: block;
+}
+
+.section {
+    background-color: rgb(247, 247, 143);
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+section > form > label {
+    display: block;    
+}
+
+#search {
+    width: 80%;
+    height: 2rem;
+}
+
+.container {
+    border: .5px solid rgb(230, 92, 92);
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0rem;
+}
+
+img {
+    width: 90%;
+}
+
+main > div > p {
+    padding: .5rem;
+}
+
+.vermas {
+    background-color: aqua;
+    width: 40%;
+    height: 2rem;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 5px;
+}
+
+.paginas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paginas > a {
+    border: 1px solid rgb(160, 111, 205);
+    padding: 1rem;
+}
+
+footer {
+    background-color: greenyellow;
+    text-align: center;
+    padding: 1rem 0rem;
+}
+
+@media (min-width: 576px) {
+    header > span {
+        padding: 20px;
+    }
+
+    header > label {
+        display: none;
+    }
+
+    header > ul {
+        display: flex;
+        font-size: 1.5rem;
+        padding: 1.5rem 0.3rem;
+    }
+
+    header > ul > li {
+        padding-right: .5rem;
+    }
+
+    img {
+        width: 80%;
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    
+    .header {
+        grid-area: header;
+    }
+
+    .section {
+        grid-area: section;
+    }
+
+    .main {
+        grid-area: main;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+
+    .grid-container {
+        display: grid;    
+        grid-template-areas: 
+        'header header'
+        'section main'
+        'footer footer'
+    }
+}
+
+@media (min-width: 992px) {
+    .header {
+        grid-area: header;
+        height: 100%;
+        width: 25vw;
+    }
+
+    header > ul {
+        display: flex;
+        flex-direction: column;
+        padding-top: 100px;
+        padding-left: 30px;
+        position: absolute;
+    }    
+
+    img {
+        width: 90%;
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .section {
+        grid-area: section;
+    }
+
+    .main {
+        grid-area: main;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+
+    .grid-container {
+        display: grid;    
+        grid-template-areas: 
+        'header section'
+        'header main'
+        'footer main';
+    }
+}
