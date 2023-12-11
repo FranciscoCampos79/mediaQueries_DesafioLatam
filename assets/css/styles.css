@@ -32,6 +32,10 @@ header > ul {
     display: none;
 }
 
+header > ul > li:hover {
+    background-color: rgb(208, 183, 231);
+}
+
 .menu {
     display: none;
 }
@@ -68,11 +72,13 @@ section > form > label {
     padding: 2rem 0rem;
 }
 
+
+
 img {
     width: 90%;
 }
 
-main > div > p {
+.main > div > p {
     padding: .5rem;
 }
 
@@ -85,15 +91,24 @@ main > div > p {
     border-radius: 5px;
 }
 
+.vermas:hover {
+    width: 60%;
+}
+
 .paginas {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 1rem 0;
 }
 
 .paginas > a {
     border: 1px solid rgb(160, 111, 205);
     padding: 1rem;
+}
+
+.paginas > a:hover {
+    background-color: rgb(194, 194, 222);
 }
 
 footer {
@@ -160,7 +175,7 @@ footer {
     .header {
         grid-area: header;
         height: 100%;
-        width: 25vw;
+        width: 20vw;
     }
 
     header > ul {
@@ -169,7 +184,12 @@ footer {
         padding-top: 100px;
         padding-left: 30px;
         position: absolute;
-    }    
+    }
+
+    header > span {
+        font-size: 1.5rem;
+        padding: 20px 30px;
+    }
 
     img {
         width: 90%;
